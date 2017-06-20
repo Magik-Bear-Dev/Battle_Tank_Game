@@ -4,3 +4,4 @@ An open-head-to-head tank fight with simple AI, terrain and advanced control sys
 ## Lecture List 
 
 * S4, Lecture 99 - Intro, Notes & Section 4 Assets
+* S4, Lecture 99 - Game Design Document (GDD)
