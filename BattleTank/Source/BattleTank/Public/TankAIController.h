@@ -12,7 +12,7 @@ UCLASS()
 class BATTLETANK_API ATankAIController : public AAIController
 {
     GENERATED_BODY()
-    
+
 protected:
     // How close can the AI Tank get
     UPROPERTY(EditDefaultsOnly, Category = "Setup")
@@ -22,4 +22,6 @@ private:
     virtual void BeginPlay() override;
     
     virtual void Tick(float DeltaSeconds) override;
+    
+   
 };
