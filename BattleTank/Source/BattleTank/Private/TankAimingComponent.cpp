@@ -51,7 +51,7 @@ void UTankAimingComponent::TickComponent(float DeltaTime, enum ELevelTick TickTy
     }
 }
 
-int UTankAimingComponent::GetRoundsLeft() const
+int32 UTankAimingComponent::GetRoundsLeft() const
 {
     return RoundsLeft;
 }
