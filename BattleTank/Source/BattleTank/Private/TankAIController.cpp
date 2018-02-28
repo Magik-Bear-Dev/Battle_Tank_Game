@@ -26,7 +26,8 @@ void ATankAIController::SetPawn(APawn* InPawn)
 
 void ATankAIController::OnPossessedTankDeath()
 {
-    UE_LOG(LogTemp, Warning, TEXT("Recieved!"))
+    if (!GetPawn()) { return; }
+    GetPawn()->DetachFromControllerPendingDestroy();
 }
 
 // Called every frame
@@ -41,7 +42,9 @@ void ATankAIController::Tick(float DeltaTime)
 
     //Move towards the player
     MoveToActor(PlayerTank, AcceptanceRadius); // Check radius is in cm
-        
+    
+    if(!PlayerTank){ return; }
+    
     // Aim towards the player
     auto AimingComponent = ControlledTank->FindComponentByClass<UTankAimingComponent>();
     AimingComponent->AimAt(PlayerTank->GetActorLocation());
